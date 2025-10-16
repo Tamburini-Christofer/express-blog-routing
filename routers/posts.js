@@ -84,6 +84,14 @@ router.post("/", (req, res) => {
   res.send("Creazione di un nuovo post");
 });
 
+//?UPDATE
+//todo Aggiorno un post esistente
+router.put("/:id", (req, res) => {
+  const postId = (req.params.id);
+  res.send(`Aggiornamento del post con id ${postId}`);
+}
+
+
 
   
 
