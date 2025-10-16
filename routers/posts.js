@@ -89,13 +89,14 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
   const postId = (req.params.id);
   res.send(`Aggiornamento del post con id ${postId}`);
-}
+});
 
+//?DELETE
+//todo Elimino un post esistente
+router.delete("/:id", (req, res) => {
+  const postId = (req.params.id);
+  res.send(`Eliminazione del post con id ${postId}`);
+});
 
-
-  
-
-
-
-
-module.exports = posts;
+//todo Esporto il router
+module.exports = router;
