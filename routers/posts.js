@@ -108,4 +108,4 @@ router.delete("/:id", (req, res) => {
 });
 
 //todo Esporto il router
-module.exports = router;
+module.exports = { router, posts };

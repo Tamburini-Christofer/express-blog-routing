@@ -9,18 +9,22 @@ const server = express();
 //todo Riferimento porta del server
 const PORT = 3000;
 
+const { router: postsRouter, posts } = require("./routers/posts.js");
+
+//todo Middleware per parsing JSON (necessario per POST/PUT che leggono body)
+server.use(express.json());
+
 //todo Impostiamo la prima rotta, quella index
 server.get("/", (req, res) => {
-  res.send(`<h1> Server del mio blog </h1>`);
+  res.send(`<h1>Server del mio blog</h1>`);
 });
-
-//todo Importo l'array che l'ho messo in un altro file e l'ho esportato come modulo
-const posts = require("./routers/posts.js");
 
 //todo Creo la rotta bacheca
 server.get("/bacheca", (req, res) => {
     res.json({posts});
 });
+
+server.use("/posts", postsRouter);
 
 //todo Configuriamo gli asset statici sull’applicazione in modo che si possano visualizzare le immagini associate ad ogni post.
 server.use(express.static("public"));
