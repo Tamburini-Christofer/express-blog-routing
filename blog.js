@@ -15,7 +15,7 @@ server.get("/", (req, res) => {
 });
 
 //todo Importo l'array che l'ho messo in un altro file e l'ho esportato come modulo
-const posts = require("./posts.js");
+const posts = require("./routers/posts.js");
 
 //todo Creo la rotta bacheca
 server.get("/bacheca", (req, res) => {

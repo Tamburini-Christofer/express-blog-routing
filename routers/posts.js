@@ -1,3 +1,9 @@
+//todo Importo Express
+const express = require("express");
+
+//todo Creo il router
+const router = express.Router();
+
 const posts = [
     {
       id: 1,
@@ -40,5 +46,16 @@ const posts = [
       tags: ["dolci", "tradizione", "ricette_di_casa"],
     },
 ]
+
+//todo Restituisco la lista di tutti i post
+router.get("/", (req, res) => {
+  //todo Restituisco in formato JSON
+    res.json({
+      message: "Ecco tutti i post",
+      data: posts
+    });
+});
+
+
 
 module.exports = posts;
