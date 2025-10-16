@@ -1,0 +1,44 @@
+const posts = [
+    {
+      id: 1,
+      title: "Il ciambellone",
+      content:
+        "Un dolce semplice e profumato, perfetto per la colazione o la merenda. Morbido, genuino e irresistibilmente casalingo.",
+      image: "/public/images/ciambellone.jpeg",
+      tags: ["dolci", "tradizione", "colazione"],
+    },
+    {
+      id: 2,
+      title: "I cracker alla barbabietola",
+      content:
+        "Croccanti e colorati, questi cracker alla barbabietola sono uno snack salutare e sorprendente, perfetto per accompagnare formaggi o hummus.",
+      image: "/public/images/cracker_barbabietola.jpeg",
+      tags: ["snack", "salati", "vegetariani"],
+    },
+    {
+      id: 3,
+      title: "Il buonissimo pane fritto dolce",
+      content:
+        "Un classico delle feste: soffice pane fritto ricoperto di zucchero, da gustare caldo per un tuffo nei ricordi d’infanzia.",
+      image: "/public/images/pane_fritto_dolce.jpeg",
+      tags: ["dolci", "tradizione", "streetfood"],
+    },
+    {
+      id: 4,
+      title: "La pasta alla barbabietola",
+      content:
+        "Un primo piatto dal colore vivace e dal sapore delicato, ideale per stupire a tavola con un tocco di originalità.",
+      image: "/public/images/pasta_barbabietola.jpeg",
+      tags: ["primi", "vegetariani", "creativi"],
+    },
+    {
+      id: 5,
+      title: "La torta paesana",
+      content:
+        "Ricca, rustica e piena di gusto: la torta paesana è un dolce della tradizione lombarda a base di pane raffermo, cacao e latte.",
+      image: "/public/images/torta_paesana.jpeg",
+      tags: ["dolci", "tradizione", "ricette_di_casa"],
+    },
+]
+
+module.exports = posts;
