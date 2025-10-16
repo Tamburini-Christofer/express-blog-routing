@@ -47,6 +47,7 @@ const posts = [
     },
 ]
 
+//?GET
 //todo Restituisco la lista di tutti i post
 router.get("/", (req, res) => {
   //todo Restituisco in formato JSON
@@ -55,6 +56,30 @@ router.get("/", (req, res) => {
       data: posts
     });
 });
+
+//?SHOW
+//todo Mostro un solo post
+router.get("/:id", (req, res) => {
+  //todo Recupero l'id dai parametri della rotta
+  const postId = parseInt(req.params.id);
+
+  //todo Restituisco in formato JSON
+  const post = posts.find(p => p.id === postId);
+
+  if (post) {
+    res.json({
+      message: `Ecco il post con id ${postId}`,
+      data: post
+    });
+  } else {
+    res.status(404).json({
+      message: `Post con id ${postId} non trovato`
+    });
+  } 
+});
+
+  
+
 
 
 
